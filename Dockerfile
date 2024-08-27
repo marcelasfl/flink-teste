@@ -7,8 +7,8 @@ WORKDIR /opt/flink/usj_jobs
 
 
 # Se você tiver outros arquivos de configuração, copie-os também
-COPY flink-teste/src/main/java/com/example/milw0rm-dictionary.txt /opt/flink/usj_jobs/milw0rm-dictionary.txt 
-COPY flink-teste/src/main/java/com/example/output.txt /opt/flink/usj_jobs/output.txt
+COPY src/main/java/com/example/milw0rm-dictionary.txt /opt/flink/usj_jobs/milw0rm-dictionary.txt 
+COPY src/main/java/com/example/output.txt /opt/flink/usj_jobs/output.txt
 
 
 # Ajustar permissões para os arquivos e diretórios
