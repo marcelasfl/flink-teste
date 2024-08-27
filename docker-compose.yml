@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  jobmanager:
+    image: my-flink-job
+    container_name: flink-jobmanager
+    ports:
+      - "8081:8081"
+    environment:
+      - JOB_MANAGER_RPC_ADDRESS=jobmanager
+    command: jobmanager
+    networks:
+      - flink-network
+
+  taskmanager:
+    image: my-flink-job
+    scale: 5  # Você pode aumentar o número de TaskManagers ajustando este valor
+    environment:
+      - JOB_MANAGER_RPC_ADDRESS=jobmanager
+    command: taskmanager
+    depends_on:
+      - jobmanager
+    networks:
+      - flink-network
+
+networks:
+  flink-network:
+    driver: bridge

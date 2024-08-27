@@ -1,0 +1,24 @@
+rest.profiling.enabled: true
+
+# Configuration for Flink TaskManager memory
+taskmanager.memory.process.size: 1024m
+
+taskmanager.memory.managed.size: 1024m
+taskmanager.memory.network.min: 64m
+taskmanager.memory.network.max: 2048m
+
+
+# Number of task slots per TaskManager
+taskmanager.numberOfTaskSlots: 30
+
+# Configuration for JobManager memory
+jobmanager.memory.process.size: 2024m
+
+# Parallelism
+parallelism.default: 1
+
+# Configuration for the TaskManager heap memory
+taskmanager.memory.task.heap.size: 1512m
+
+# Configuration for the JobManager heap memory
+jobmanager.memory.job.heap.size: 1512m
